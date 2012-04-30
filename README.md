@@ -1,10 +1,15 @@
-Oh Hey! 
+Jambusters
+==========
 
-JamBusters 
+Easily search for concert events in your area
+---------------------------------------------
 
+---
 
-Waliyullah Amin
-Alex Chaldyshev
-Josh Komoroske
-Jon Kriss
-Tiffany Milano
+Contributors
+------------
+* Alex Chaldyshev
+* Jon Kriss
+* Josh Komoroske
+* Tiffany Milan
+* Waliyullah Amin
