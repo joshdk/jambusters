@@ -3,9 +3,9 @@
 	$config=array(
 		'host' => 'localhost',
 		'port' => 3306,
-		'db'   => 'jabmusters',
+		'db'   => 'jambusters',
 		'user' => 'put-username-here',
-		'port' => 'put-password-here'
+		'pass' => 'put-password-here'
 	);
 
 
