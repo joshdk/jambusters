@@ -7,9 +7,13 @@
 <script type="text/javascript">
  $(document).ready(function() {
 	//getEventsByArtist("astrix",$('#test'));
-	 getEventsByLatLong(40.714,-74.006,$('#test'));
+	//getEventsByLatLong(40.714,-74.006,$('#test'),"appomattox");
+	
+	//partial artist code
+	//getArtistsByPartialArtist("infected",$('#test'));
 	});
 </script>
-<div id="test"></div>
+<input type="text" id="artistName" onkeyup=getArtistsByPartialArtist(document.getElementById('artistName').value,$('#test'))><br>
 
+<div id="test"></div>
 </body></html>
