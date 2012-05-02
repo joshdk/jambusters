@@ -1,0 +1,57 @@
+* { 
+	margin: 0; 
+}
+html { 
+	height: 100%; 
+} 
+
+body{ 
+	background-color: #fff; 
+	font-family: "arial", "sans-serif"; 
+	color: #000; 
+	overflow-y: scroll; 
+	height: 100%; 
+}
+
+.content{ 
+	margin-right: auto; 
+	margin-left: auto; 
+	width: 800px; 
+	background-color: #fff; 
+	background-repeat: repeat-y; 
+	padding: 20px; 
+}
+
+.footer, #header-wrap{ 
+	background-color: #000; 
+	background-repeat: repeat-y; 
+	color: #fff; 
+	padding: 20px; 
+	width: 800px; 
+	margin-right: auto; 
+	margin-left: auto; 
+	text-align: center; 
+}
+
+.footer{ 
+	background-color: #000; 
+	background-image: url('images/footerGradient.png'); 
+	background-repeat: repeat-x; 
+	padding: 20px; 
+	
+	text-align: center; 
+	color: #fff; 
+} 
+/* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */ 
+.wrapper { 
+	min-height: 100%; 
+	height: auto !important; 
+	height: 100%; 
+	margin: 0 auto -4em; 
+} 
+
+.footer, .push{ 
+	height: 4em; 
+	clear: both; 
+} 
+	

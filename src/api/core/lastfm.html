@@ -7,13 +7,15 @@
 <script type="text/javascript">
  $(document).ready(function() {
 	//getEventsByArtist("astrix",$('#test'));
-	getEventsByLatLong(40.714,-74.006,$('#test'),"Norah Jones");
+	//getEventsByLatLong(40.714,-74.006,$('#test'),"Norah Jones");
 	
 	//partial artist code
 	//getArtistsByPartialArtist("infected",$('#test'));
 	});
 </script>
 <input type="text" id="artistName" onkeyup=getArtistsByPartialArtist(document.getElementById('artistName').value,$('#test'))><br>
+<div id="test">
 
-<div id="test"></div>
-</body></html>
+</div>
+</body>
+</html>

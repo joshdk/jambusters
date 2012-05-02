@@ -62,9 +62,10 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 
 function getArtistsByPartialArtist(artist,selector)
 {
-	if(artist == "")
-		return;
+
 	selector.empty();
+		if(artist == "")
+		return;
 	var url = "http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=" + artist + "&api_key=b25b959554ed76058ac220b7b2e0a026&format=json&callback=?";
 	$.getJSON(url, function(data) {
 		console.log(data);
