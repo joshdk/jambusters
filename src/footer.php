@@ -5,8 +5,10 @@
 			<!-- the div tag below closes the div id='wrapper' in the header.php file --> 
 		</div> 
 		<div class="footer">
-			Copywrite 2012 by Tiffany Milano and Jon Kriss <br /> 
-			because we're sick of doing homeworks for this class.. <br /> 
+			<div id="copywrite">JamBusters &copy; Copywrite 2012 <br /> 
+				Waliyullah Amin, Alex Chaldyshev, Josh Komoroske, Jon Kriss, & Tiffany Milano 
+			</div> 
+			<br /> 
 		</div> 
 	
 	</body> 

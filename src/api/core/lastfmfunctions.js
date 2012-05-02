@@ -57,12 +57,20 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 			html += "<p> No Events Found </p>";
 		}
 		selector.append(html);
-    });
+		return data;
+	});
+}
+
+//checks if a new character 
+//requires a new api call
+function isValidKey()
+{
+
+
 }
 
 function getArtistsByPartialArtist(artist,selector)
 {
-
 	selector.empty();
 		if(artist == "")
 		return;
@@ -81,6 +89,8 @@ function getArtistsByPartialArtist(artist,selector)
 			html += "<p> No Events Found </p>";
 		}
 		selector.append(html);
+		$('.dropdown-toggle').click();
+	
     });
 }
 
