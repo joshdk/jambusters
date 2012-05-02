@@ -28,17 +28,28 @@ function getEventsByArtist(artistName,selector)
 }
 
 //Artist will be optionally included
-
+//to filter by just artist
 function getEventsByLatLong(Lat, Long,selector,artistName)
 {
-	var url = "http://ws.audioscrobbler.com/2.0/?method=geo.getevents&lat=" + Lat + "&long=" + Long + "&api_key=b25b959554ed76058ac220b7b2e0a026&format=json&callback=?";
+	var url = "http://ws.audioscrobbler.com/2.0/?method=geo.getevents&lat=" + Lat + "&long=" + Long + "&api_key=b25b959554ed76058ac220b7b2e0a026&format=json&limit=30&callback=?";
    $.getJSON(url, function(data) {
 		console.log(data);
 		var html = '';
 		if(data.events.total!=0) //no events found
 		{
 			$.each(data.events.event, function(i, item) {
-			html += "<li> Title:" + item.title + "<br> Description:" + item.description + "</li>";
+				if(item.artists.artist instanceof Array)//is an array
+				{
+					if(jQuery.inArray(artistName,item.artists.artist)!=-1) //artist you were loooking for has been found
+					{
+						html += "<li> Title:" + item.title + "<br> Description:" + item.description + "<br> All Artists:" + item.artists.artist + "</li>";
+					}
+				}
+				else //is not an array
+				{
+					if(item.artists.artist == artistName)
+						html += "<li> Title:" + item.title + "<br> Description:" + item.description + "<br> All Artists:" + item.artists.artist + "</li>";
+				}
 			});
 		}
 		else 
