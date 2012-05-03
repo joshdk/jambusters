@@ -13,7 +13,7 @@ body{
 	height: 100%; 
 }
 
-.content{ 
+.content-wrap{ 
 	clear: left; 
 	width: 800px; 
 	background-color: #fff; 
@@ -22,9 +22,29 @@ body{
 	margin-left: auto; 
 	margin-right: auto; 
 }
+
+.left-content{ 
+	margin-left: 30px; 
+	width: 500px; 
+	float: left; 
+	clear: left; 
+	min-height: 500px; 
+
+}
+
+.right-content{ 
+	border-style: solid; 
+	border-width: 1px; 
+	height: 100px; 
+	width: 200px; 
+	overflow-y: scroll; 
+	height: 200px; 
+	padding: 10px; 
+}
+
 .header-wrap{ 
 	background-color: #fff;  
-	background-image: url('assets/img/top_banner.png'); 
+	background-image: url('images/top_banner.png'); 
 	background-repeat: repeat-x; 
 	color: #000; 
 	width: 800px; 
@@ -53,7 +73,7 @@ body{
 
 .footer{ 
 	background-color: #000; 
-	background-image: url('assets/img/drum_kit_v02.png'); 
+	background-image: url('images/drum_kit_v02.png'); 
 	background-position: fixed;
 	background-position: center bottom; 
 	background-repeat: no-repeat; 
@@ -67,44 +87,42 @@ body{
 	margin-bottom: 0px; 
 }
 
-.search { 
-	margin-left: 550px; 
-	padding-top: 30px; 
-}
-
 /* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */ 
 .wrapper { 
 	min-height: 100%; 
 	height: auto !important; 
 	height: 100%; 
-	margin: 0 auto -4em; 
+	margin: 0 auto -27.5em; 
 } 
 
 .footer, .push{ 
-	height: 4em; 
+	height: 27.5em; 
 	clear: both; 
 } 
 	
 	
 /*http://www.awcore.com/url/aHR0cDovL3d3dy5ibG9nZ2VybWludC5jb20vMjAxMS8wNi9jc3MzLXNlYXJjaC1ib3gtaW5zcGlyZWQtYnktYXBwbGUtY29tLw==*/ 	
 #search {
-
+}
+.search{ 
+	padding-top: 30px; 
+	padding-bottom: 20px;
 }
 
 #search input[type="text"] {
-    background: url('assets/img/search-dark.png') no-repeat 10px 6px #444;
-    border: 0 none;
+    background: url('images/search-white.png') no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
     font: bold 12px Arial,Helvetica,Sans-serif;
-    color: #777;
+    color: #bebebe;
     width: 150px;
     padding: 6px 15px 6px 35px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
     -webkit-transition: all 0.7s ease 0s;
     -moz-transition: all 0.7s ease 0s;
     -o-transition: all 0.7s ease 0s;
@@ -113,4 +131,4 @@ body{
 
 #search input[type="text"]:focus {
     width: 200px;
-    }
+}
