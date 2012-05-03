@@ -35,6 +35,7 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
    $.getJSON(url, function(data) {
 		console.log(data);
 		var html = '';
+		var items = new Array();
 		if(data.events.total!=0) //no events found
 		{
 			$.each(data.events.event, function(i, item) {
@@ -42,7 +43,9 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 				{
 					if(jQuery.inArray(artistName,item.artists.artist)!=-1) //artist you were loooking for has been found
 					{
-						
+						console.log("success");
+						//items.push(item);
+						addVenue(item);
 						html += "<li> Title:" + item.title + "<br> Description:" + item.description + "<br> All Artists:" + item.artists.artist + "</li>";
 					}
 				}
@@ -57,13 +60,14 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 		{
 			html += "<p> No Events Found </p>";
 		}
+		
 		selector.append(html);
-		return data;
-	});
+    });
 }
 
 function getArtistsByPartialArtist(artist,selector)
 {
+
 	selector.empty();
 		if(artist == "")
 		return;
@@ -82,8 +86,6 @@ function getArtistsByPartialArtist(artist,selector)
 			html += "<p> No Events Found </p>";
 		}
 		selector.append(html);
-		$('.dropdown-toggle').click();
-	
     });
 }
 
