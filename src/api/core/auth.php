@@ -54,6 +54,7 @@ session_start();
 			$salt=$this->salt();
 			$hash=hash('sha512', $salt.$pass);
 			$res->execute(array($user, $hash, $salt));
+			return $res->rowCount()==1;
 		}
 
 
