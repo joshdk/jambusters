@@ -167,9 +167,9 @@ include("header.php");
 			</div>
 		</div>
 
-		<footer>
-		<p>&copy; Jambusters 2012</p>
-		</footer>
+		<!-- <footer> -->
+		<!-- <p>&copy; Jambusters 2012</p> -->
+		<!-- </footer> -->
 
 	</div> <!-- /container -->
 
