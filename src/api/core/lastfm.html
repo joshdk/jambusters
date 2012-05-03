@@ -17,17 +17,13 @@
 
 		$( "#artist" ).autocomplete({
 			source: function( request, response ) {
-			console.log(response);
 			var url = "http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=" + request.term + "&api_key=b25b959554ed76058ac220b7b2e0a026&format=json&callback=?";
 				$.ajax({
 					url: url,
 					dataType: "json",
 					success: function( data ) {
 					console.log(data);
-					
-						//$.each(, function(i, item) {
-					
-						if(data.results.totalResults!=0) //no artists found
+						if(data.results["opensearch:totalResults"]!=0) //no artists found
 						{		
 						response( $.map( data.results.artistmatches.artist, function( item ) {
 							return {
@@ -80,7 +76,7 @@
 -->
 <div class="demo">
 <div class="ui-widget">
-	<label for="artist">Your city: </label>
+	<label for="artist">Enter Artist: </label>
 	<input id="artist" />
 </div>
 
