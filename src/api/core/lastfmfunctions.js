@@ -42,6 +42,7 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 				{
 					if(jQuery.inArray(artistName,item.artists.artist)!=-1) //artist you were loooking for has been found
 					{
+						
 						html += "<li> Title:" + item.title + "<br> Description:" + item.description + "<br> All Artists:" + item.artists.artist + "</li>";
 					}
 				}
@@ -59,14 +60,6 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 		selector.append(html);
 		return data;
 	});
-}
-
-//checks if a new character 
-//requires a new api call
-function isValidKey()
-{
-
-
 }
 
 function getArtistsByPartialArtist(artist,selector)
