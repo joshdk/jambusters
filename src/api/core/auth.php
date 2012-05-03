@@ -29,10 +29,10 @@ session_start();
 
 
 		public function name(){
-			if(!isset($this->name)){
-				return NULL;
+			if(!isset($_SESSION['name'])){
+				return false;
 			}
-			return $this->name;
+			return $_SESSION['name'];
 		}
 
 
