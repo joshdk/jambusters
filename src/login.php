@@ -4,6 +4,7 @@
 
 	$error=false;
 	$errmsg=NULL;
+	$auth=new auth();
 
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -20,7 +21,6 @@
 				break;
 			}
 
-			$auth=new auth();
 			if($auth->login($_POST['username'],$_POST['password1'])){
 				header('Location: /');
 				die();
@@ -80,16 +80,35 @@
 
 					<div class="btn-group pull-right">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-							<i class="icon-user"></i> Anonymous
+							<i class="icon-user"></i> 
+<?php
+	if($auth->is_login()){
+		echo $auth->name();
+	}else{
+		echo 'anonymous';
+	}
+?>
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
+<?php
+	if($auth->is_login()){
+?>
 							<li>
-							<a href="#">Profile</a>
+							<a href="/logout.php">Logout</a>
+							</li>
+<?php
+	}else{
+?>
+							<li>
+							<a href="/login.php">Login</a>
 							</li>
 							<li>
-							<a href="#">Profile</a>
+							<a href="/register.php">Register</a>
 							</li>
+<?php
+	}
+?>
 						</ul>
 					</div>
 
