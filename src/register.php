@@ -95,7 +95,7 @@
 							<i class="icon-user"></i> 
 <?php
 	if($auth->is_login()){
-		echo $auth->name();
+		echo htmlentities($auth->name());
 	}else{
 		echo 'anonymous';
 	}
@@ -143,7 +143,7 @@
 	<strong>Error!</strong> 
 <?php
 //Change a few things up and try submitting again.
-	echo $errmsg;
+	echo htmlentities($errmsg);
 ?>
 </div>
 <?php
