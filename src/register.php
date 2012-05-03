@@ -34,7 +34,7 @@
 			}
 
 			if($auth->register($_POST['username'],$_POST['password1'])){
-				header('Location: /');
+				header('Location: /login.php');
 				die();
 				
 			}else{
@@ -48,7 +48,7 @@
 
 
 
-
+include("header.php");
 
 ?>
 <!DOCTYPE html>
@@ -211,6 +211,10 @@
 	<script src="../assets/js/bootstrap-carousel.js"></script>
 	<script src="../assets/js/bootstrap-typeahead.js"></script>
 
-</body>
+
+<?php
+	include("footer.php");
+?>
+
 </html>
 

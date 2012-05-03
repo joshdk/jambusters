@@ -1,14 +1,32 @@
-<?php include("header.php"); ?>
+<?php
+include("header.php"); 
+include($_SERVER['DOCUMENT_ROOT'] . '/api/core/auth.php');
+
+$auth=new auth();
+?>
 
 
 
 	<div class="content-wrap"> 
-	
 	<div id="login"> 
-	<button>Login</button> If you have an account 
-	<br /> 
-	 <button>Register</button> If you do not have an account 
-		<br /> 
+<?php
+	if($auth->is_login()){
+		echo '<strong><em>Welcome '.htmlentities($auth->name()).'</em></strong>';
+?>
+		<br />
+		<a href="/logout.php"><button>Logout</button></a>
+<?php
+	}else{
+?>
+		<a href="/login.php"><button>Login</button></a> If you have an account
+		<br />
+		<a href="/register.php"><button>Register</button></a> If you do not have an account
+		<br />
+<?php
+	}
+?>
+
+
 		<br /> </div> 
 		
 		

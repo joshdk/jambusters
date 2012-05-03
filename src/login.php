@@ -35,8 +35,7 @@
 	}
 
 
-
-
+include("header.php");
 
 ?>
 <!DOCTYPE html>
@@ -191,6 +190,10 @@
 	<script src="../assets/js/bootstrap-carousel.js"></script>
 	<script src="../assets/js/bootstrap-typeahead.js"></script>
 
-</body>
+
+<?php
+	include('footer.php');
+?>
+
 </html>
 
