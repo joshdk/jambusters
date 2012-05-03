@@ -63,6 +63,10 @@ session_start();
 			$res->execute(array($user));
 			$row=$res->fetch(PDO::FETCH_ASSOC);
 
+			if($row==false){
+				return false;
+			}
+
 			if(hash('sha512', $row['salt'].$pass) == $row['hash']){
 				$this->name=$user;
 				$this->id=$row['user_id'];
