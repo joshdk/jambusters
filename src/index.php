@@ -1,34 +1,17 @@
-
 <?php include("header.php"); ?>
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
 	<div class="content-wrap"> 
-	
-		<!--Enter artist input box-->
-		<div class="ui-widget">
-		<label for="artist">Enter Artist: </label>
-		<input id="artist" />
-		</div>
-
-		
-		<!--Selected Artist Listbox-->
-		<div class="ui-widget" style="margin-top:2em; font-family:Arial">
-			Selected Artists:
-			<div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
-		</div>
-		
-	
 		<div class="left-content"> 
-			<!-- below is the "search" feature form --> 
-			<form method="get" action="/search" id="search" class="search">
-				<input name="q" type="text" size="40" placeholder="Find an Artist..." />
-			</form>
-			<p> This is random text 
-			<br /> and there is no point to having it here 
-			<br /> except Tiffany wants to test things! </p> 
+			Select an Artist to add to the list <br /> 
+			<!--Enter artist input box-->
+			<input class="artistSearch" id="artist" type="text" size="40" placeholder="Find an Artist..." /> 
+			<br /> 
+			<br /> 
+			<!--Selected Artist Listbox-->
+			Current Artists... 
+			<div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
 		</div> 
+		
 		<div class="right-content"> 
 			<p> This is a test of the right content
 				<br /> this will have a lot of artists 
