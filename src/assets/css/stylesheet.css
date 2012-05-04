@@ -25,7 +25,7 @@ body{
 
 .left-content{ 
 	margin-left: 30px; 
-	width: 400px; 
+	width: 200px; 
 	float: left; 
 	clear: left; 
 	min-height: 500px; 
@@ -34,10 +34,11 @@ body{
 
 .right-content{ 
 	float: right;
+	clear: right; 
 	border-width: 0px; 
 	height: 450px; 
-	width: 650px; 
-	padding: 10px; 
+	width: 400px; 
+	padding: 0px; 
 }
 
 .map_canvas {
