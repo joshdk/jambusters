@@ -88,14 +88,14 @@
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
-					<a class="brand" href="#">Project name</a>
+					<a class="brand" href="#">Jambusters</a>
 
 					<div class="btn-group pull-right">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 							<i class="icon-user"></i> 
 <?php
 	if($auth->is_login()){
-		echo $auth->name();
+		echo htmlentities($auth->name());
 	}else{
 		echo 'anonymous';
 	}
@@ -143,7 +143,7 @@
 	<strong>Error!</strong> 
 <?php
 //Change a few things up and try submitting again.
-	echo $errmsg;
+	echo htmlentities($errmsg);
 ?>
 </div>
 <?php
