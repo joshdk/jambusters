@@ -15,7 +15,7 @@ body{
 
 .content-wrap{ 
 	clear: left; 
-	width: 800px; 
+	width: 900px; 
 	background-color: #fff; 
 	background-repeat: repeat-y; 
 	padding: 20px; 
@@ -33,13 +33,16 @@ body{
 }
 
 .right-content{ 
-	border-style: solid; 
-	border-width: 1px; 
-	height: 100px; 
-	width: 200px; 
-	overflow-y: scroll; 
-	height: 200px; 
+	float: right;
+	border-width: 0px; 
+	height: 450px; 
+	width: 650px; 
 	padding: 10px; 
+}
+
+.map_canvas {
+	float: right;
+	clear: right;
 }
 
 .header-wrap{ 

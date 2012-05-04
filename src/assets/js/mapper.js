@@ -6,8 +6,9 @@ var infoWindow = null;
 var markers;
 var ITEM;
 function initialize() {
-   geocoder = new google.maps.Geocoder();
-infoWindow =  new google.maps.InfoWindow();
+console.log("initializing");
+	geocoder = new google.maps.Geocoder();
+	infoWindow =  new google.maps.InfoWindow();
 
         var myOptions = {
           center: new google.maps.LatLng(40.714,-74.006),
@@ -30,10 +31,11 @@ function codeAddress() {
       }
 console.log(results[0].geometry.location);
 
+var artists = getArtists();
 
 //var artist = document.getElementById("artistName").value;
 //var artist = ["We Were Promised Jetpacks","Liturgy"];
-	getEventsByLatLong(results[0].geometry.location.$a,results[0].geometry.location.ab,$('#test'),getArtists());
+	getEventsByLatLong(results[0].geometry.location.$a,results[0].geometry.location.ab,$('#test'),artists);
     });
 }
 

@@ -1,5 +1,7 @@
 <?php include("header.php"); ?>
 
+
+
 	<div class="content-wrap"> 
 		<div class="left-content"> 
 			Select an Artist to add to the list <br /> 
@@ -11,15 +13,16 @@
 			Current Artists... 
 			<div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
 		</div> 
-		<div class="right-content"> 
-			<label for="location">Location</label><input type="text" id="location" onkeyup="">
-			<button id="submit" onclick = "codeAddress()">Map It!</button>
+		<div class="right-content" onload="initialize();"> 
+			<label for="location">Location</label><input type="text" id="location">
+			<button id="submit" onclick = "codeAddress();">Map It!</button>
 			<br/>
-			<div id="map_canvas" style="width:100%; height:100%"></div>
+			<div id="map_canvas" style="width:600px; height:400px"></div>
 		</div> 
 		
-		
+
 	</div> 
+
 	<script>
 	$(function() {
 		function log( message ) {
