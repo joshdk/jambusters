@@ -11,15 +11,14 @@
 			Current Artists... 
 			<div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
 		</div> 
-		
 		<div class="right-content"> 
-			<p> This is a test of the right content
-				<br /> this will have a lot of artists 
-				<br /> in it when it is actually working 
-				<br /> but for now I just am wondering about 
-				<br /> this whole scrolling thing... 
-				<br /> do we want it bigger?</p> 
+			<label for="location">Location</label><input type="text" id="location" onkeyup="">
+			<button id="submit" onclick = "codeAddress()">Map It!</button>
+			<br/>
+			<div id="map_canvas" style="width:100%; height:100%"></div>
 		</div> 
+		
+		
 	</div> 
 	<script>
 	$(function() {

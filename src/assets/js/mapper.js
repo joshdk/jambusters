@@ -32,8 +32,8 @@ console.log(results[0].geometry.location);
 
 
 //var artist = document.getElementById("artistName").value;
-var artist = ["We Were Promised Jetpacks","Liturgy"];
-	getEventsByLatLong(results[0].geometry.location.$a,results[0].geometry.location.ab,$('#test'),artist);
+//var artist = ["We Were Promised Jetpacks","Liturgy"];
+	getEventsByLatLong(results[0].geometry.location.$a,results[0].geometry.location.ab,$('#test'),getArtists());
     });
 }
 

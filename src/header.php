@@ -10,6 +10,11 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 		<script src="assets/js/lastfmfunctions.js" type="text/javascript"></script>
+		<script src="assets/js/mapper.js" type="text/javascript"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBY98lcCjXRBf4lFiFG4X3H3N7lCLdxTd8&sensor=false";>
+		</script>
+		
+
 	</head> 
 	<body> 
 		<div class="wrapper"> 
