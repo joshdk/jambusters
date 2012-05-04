@@ -7,7 +7,6 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 </head>
 <body>
-	
 	<script>
 	$(function() {
 		function log( message ) {
@@ -54,12 +53,16 @@
 <script type="text/javascript">
  $(document).ready(function() {
 	//getEventsByArtist("astrix",$('#test'));
-	//getEventsByLatLong(40.714,-74.006,$('#test'),"Norah Jones");
+	
+	getEventsByLatLong(40.714,-74.006,$('#test'),Array("Norah Jones","appomatox"));
 	
 	//partial artist code
 	//getArtistsByPartialArtist("infected",$('#test'));
 	
 	//$('.dropdown-toggle').dropdown();
+	
+	
+	
 	});
 </script>
 
@@ -72,9 +75,6 @@
 	Selected Artists:
 	<div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
 </div>
-
-
-
 
 <div id="test">
 

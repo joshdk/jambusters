@@ -28,21 +28,21 @@ function getEventsByArtist(artistName,selector)
 }
 
 //Artist is now an array of artists
-function getEventsByLatLong(Lat, Long,selector,artistNames)
+function getEventsByLatLong(Lat, Long,selector,artistName)
 {
 	var url = "http://ws.audioscrobbler.com/2.0/?method=geo.getevents&lat=" + Lat + "&long=" + Long + "&api_key=b25b959554ed76058ac220b7b2e0a026&format=json&limit=30&callback=?";
    $.getJSON(url, function(data) {
-		console.log(data);
 		var html = '';
 		var items = new Array();
-		if(data.events.total!=0) //no events foundh
+		if(data.events.total!=0) //no events found
 		{
 			$.each(data.events.event, function(i, item) {
 				if(item.artists.artist instanceof Array)//is an array
 				{
-					for(artist in artistName)
+					
+					for(var x =0; x < artistName.length;x++)
 					{
-						if(jQuery.inArray(artist,item.artists.artist)!=-1) //artist you were loooking for has been found
+						if(jQuery.inArray(artistName[x],item.artists.artist)!=-1) //artist you were loooking for has been found
 						{
 							console.log("success");
 							//items.push(item);
@@ -53,9 +53,9 @@ function getEventsByLatLong(Lat, Long,selector,artistNames)
 				}
 				else //is not an array
 				{
-					for(artist in artistName)
+					for(var x =0; x < artistName.length;x++)
 					{
-						if(item.artists.artist == artistName)
+						if(item.artists.artist == artistName[x])
 							html += "<li> Title:" + item.title + "<br> Description:" + item.description + "<br> All Artists:" + item.artists.artist + "</li>";
 					}
 				}
