@@ -3,6 +3,15 @@
 
 
 	<div class="content-wrap"> 
+	
+	<div id="login"> 
+	<button>Login</button> If you have an account 
+	<br /> 
+	 <button>Register</button> If you do not have an account 
+		<br /> 
+		<br /> </div> 
+		
+		
 		<div class="left-content" > 
 			Select an Artist to add to the list <br /> 
 			<!--Enter artist input box-->
