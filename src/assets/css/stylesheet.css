@@ -61,15 +61,6 @@ body{
 } 
 
 
-.footer{ 
-	background-color: #000; 
-	background-repeat: repeat-y; 
-	color: #fff; 
-	padding: 20px; 
-	margin-right: auto; 
-	margin-left: auto; 
-	text-align: center; 
-}
 
 .footer{ 
 	background-color: #000; 
@@ -77,6 +68,8 @@ body{
 	background-position: fixed;
 	background-position: center bottom; 
 	background-repeat: no-repeat; 
+	margin-left: auto; 
+	margin-right: auto; 
 	padding: 20px; 
 	min-height: 400px; 
 	font-size: 80%; 

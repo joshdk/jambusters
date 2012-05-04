@@ -5,10 +5,9 @@
 			<!-- the div tag below closes the div id='wrapper' in the header.php file --> 
 		</div> 
 		<div class="footer">
-			<div id="copywrite">JamBusters &copy; Copywrite 2012 <br /> 
+			JamBusters &copy; Copywrite 2012 <br /> 
 				Waliyullah Amin, Alex Chaldyshev, Josh Komoroske, Jon Kriss, & Tiffany Milano 
-			</div> 
-			<br /> 
+			
 		</div> 
 	
 	</body> 
