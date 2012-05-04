@@ -6,15 +6,19 @@
 
 	<div class="content-wrap"> 
 	
+		<!--Enter artist input box-->
 		<div class="ui-widget">
 		<label for="artist">Enter Artist: </label>
 		<input id="artist" />
 		</div>
 
+		
+		<!--Selected Artist Listbox-->
 		<div class="ui-widget" style="margin-top:2em; font-family:Arial">
 			Selected Artists:
 			<div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
 		</div>
+		
 	
 		<div class="left-content"> 
 			<!-- below is the "search" feature form --> 
