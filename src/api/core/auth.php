@@ -29,10 +29,10 @@ session_start();
 
 
 		public function name(){
-			if(!isset($this->name)){
-				return NULL;
+			if(!isset($_SESSION['name'])){
+				return false;
 			}
-			return $this->name;
+			return $_SESSION['name'];
 		}
 
 
@@ -54,6 +54,7 @@ session_start();
 			$salt=$this->salt();
 			$hash=hash('sha512', $salt.$pass);
 			$res->execute(array($user, $hash, $salt));
+			return $res->rowCount()==1;
 		}
 
 
@@ -61,6 +62,10 @@ session_start();
 			$res=$this->db->prepare('SELECT * FROM `users` WHERE `name` = ?;');
 			$res->execute(array($user));
 			$row=$res->fetch(PDO::FETCH_ASSOC);
+
+			if($row==false){
+				return false;
+			}
 
 			if(hash('sha512', $row['salt'].$pass) == $row['hash']){
 				$this->name=$user;
