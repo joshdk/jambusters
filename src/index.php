@@ -22,8 +22,11 @@
 		</div> 
 	</div> 
 	<script>
+	currentArtists = [];
+	
 	$(function() {
 		function log( message ) {
+			currentArtists.push(message);
 			$( "<div/>" ).text( message ).prependTo( "#log" );
 			$( "#log" ).scrollTop( 0 );
 		}

@@ -39,7 +39,6 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 			$.each(data.events.event, function(i, item) {
 				if(item.artists.artist instanceof Array)//is an array
 				{
-					
 					for(var x =0; x < artistName.length;x++)
 					{
 						if(jQuery.inArray(artistName[x],item.artists.artist)!=-1) //artist you were loooking for has been found
