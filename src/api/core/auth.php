@@ -102,15 +102,15 @@ session_start();
 		}
 
 
-		public function promote($user){
+		public function promote($user, $admin){
 			if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
 
 				$res=$this->db->prepare(
 					'UPDATE  `users` '.
-					'SET  `admin` =  1 '.
+					'SET  `admin` =  ? '.
 					'WHERE  `name` = ?; '
 				);
-				if($res->execute(array($user))){
+				if($res->execute(array($admin, $user))){
 					return true;
 				}
 				return false;
