@@ -1,7 +1,5 @@
 <?php include("header.php"); ?>
 
-
-
 	<div class="content-wrap"> 
 		<div class="left-content"> 
 			Select an Artist to add to the list <br /> 
@@ -19,16 +17,32 @@
 			<br/>
 			<div id="map_canvas" style="width:600px; height:400px"></div>
 		</div> 
-		
 
 	</div> 
 
 	<script>
+		function removeArtistFromLog(event){ 
+		console.log(event);
+		artistToRemove = event.target.id;
+		console.log($("#log"));
+		
+		
+		var d = document.getElementById("log");//$("#log");//
+		var olddiv =  document.getElementById(artistToRemove);
+		d.removeChild(olddiv);
+		removeArtist(artistToRemove);
+	}
+	
 	$(function() {
 		function log( message ) {
 			addArtist(message);
-			console.log(getArtists());
-			$( "<div/>" ).text( message ).prependTo( "#log" );
+			html = "";
+			html = "<input type=\"submit\" value=\"x\" id=\"";
+			html+= message + "\"";
+			html+= "onclick=removeArtistFromLog(event) >";
+			console.log("button html: " + html);
+			$( "<div id=\"" + message + "\"/>" ).html(message + html).prependTo( "#log" );
+			console.log($("#log"));
 			$( "#log" ).scrollTop( 0 );
 		}
 

@@ -47,7 +47,7 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 							console.log("success");
 							//items.push(item);
 							addVenue(item);
-							html += "<li> Title:" + item.title + "<br> Description:" + item.description + "<br> All Artists:" + item.artists.artist + "</li>";
+						html += "<li> Title:" + item.title + "<br> Description:" + item.description + "<br> All Artists:" + item.artists.artist + "</li>";
 						}
 					}
 				}
@@ -97,6 +97,12 @@ currentArtists = [];
 function addArtist(artist)
 {
 	currentArtists.push(artist);
+}
+
+function removeArtist(artist)
+{
+	var idx = currentArtists.indexOf(artist); 
+	if (idx!=-1) currentArtists.splice(idx,1);
 }
 
 function getArtists()
