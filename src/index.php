@@ -22,10 +22,7 @@
 
 	<script>
 		function removeArtistFromLog(event){ 
-		console.log(event);
-		artistToRemove = event.target.id;
-		console.log($("#log"));
-		
+		var artistToRemove = event.target.id;
 		
 		var d = document.getElementById("log");//$("#log");//
 		var olddiv =  document.getElementById(artistToRemove);
@@ -37,11 +34,11 @@
 		function log( message ) {
 			addArtist(message);
 			html = "";
-			html = "<input type=\"submit\" value=\"x\" id=\"";
+			html = "<input type=\"submit\" class=\"artistButton\"  value=\"x\" id=\"";
 			html+= message + "\"";
 			html+= "onclick=removeArtistFromLog(event) >";
 			console.log("button html: " + html);
-			$( "<div id=\"" + message + "\"/>" ).html(message + html).prependTo( "#log" );
+			$( "<div id=\"" + message + "\"/>" ).html(html + " " + message).prependTo( "#log" );
 			console.log($("#log"));
 			$( "#log" ).scrollTop( 0 );
 		}
@@ -53,7 +50,6 @@
 					url: url,
 					dataType: "json",
 					success: function( data ) {
-					console.log(data);
 						if(data.results["opensearch:totalResults"]!=0) //no artists found
 						{		
 						response( $.map( data.results.artistmatches.artist, function( item ) {
@@ -68,6 +64,10 @@
 			},
 			minLength: 2,
 			select: function( event, ui ) {
+				//set vlaue of thing to ""
+				//ui.item.label = "";
+				//$("#artist").replaceWith(blankSearchdiv);
+				
 				log( ui.item ?
 					ui.item.label :
 					"Nothing selected, input was " + this.value);
@@ -80,6 +80,7 @@
 			}
 		});
 	});
+	
 	</script>
 
 <?php include("footer.php"); ?> 

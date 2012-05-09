@@ -13,9 +13,15 @@ body{
 	height: 100%; 
 }
 
+.artistButton { 
+	background-color: #000; 
+	color: #fff; 
+	border: none; 
+}
+
 .content-wrap{ 
 	clear: left; 
-	width: 900px; 
+	width: 800px; 
 	background-color: #fff; 
 	background-repeat: repeat-y; 
 	padding: 20px; 
@@ -25,7 +31,7 @@ body{
 
 .left-content{ 
 	margin-left: 30px; 
-	width: 400px; 
+	width: 300px; 
 	float: left; 
 	clear: left; 
 	min-height: 500px; 
@@ -36,7 +42,7 @@ body{
 	float: right;
 	border-width: 0px; 
 	height: 450px; 
-	width: 650px; 
+	width: 450px; 
 	padding: 10px; 
 }
 
@@ -46,19 +52,20 @@ body{
 }
 
 .header-wrap{ 
-	background-color: #fff;  
-	background-image: url('../img/top_banner.png'); 
-	background-repeat: repeat-x; 
+	background-color: #000;  
+	background-repeat: repeat-x;
 	color: #000; 
-	width: 800px; 
+	width: 1000px; 
 	margin-left: auto; 
 	margin-right: auto; 
-	min-height: 175px;
+	height: 100px;
 }
 
 
 .header{ 
+	background-image: url('../img/top_banner.png'); 
 	width: 800px; 
+	height: 175px; 
 	margin-left: auto; 
 	margin-right: auto; 
 } 
