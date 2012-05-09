@@ -30,6 +30,10 @@ body{
 	margin-right: auto; 
 }
 
+li { 
+	list-style-type: none; 
+}
+
 
 .left-content{ 
 	margin-left: 30px; 

@@ -83,8 +83,6 @@ $auth=new auth();
 <?php
 	}
 ?>
-
-
  
 		<div class="left-content" > 
 			Select an Artist to add to the list <br /> 
