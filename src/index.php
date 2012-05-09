@@ -13,16 +13,19 @@
 			Current Artists... 
 			<div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
 		</div> 
-		<div class="right-content" onload="initialize();"> 
+		<div class="right-content">
 			<label for="location">Location</label><input type="text" id="location">
 			<button id="submit" onclick = "codeAddress();">Map It!</button>
+            <input type="checkbox" id="useNav" value="usenav"> Use Current Location
 			<br/>
-			<div id="map_canvas" style="width:600px; height:400px"></div>
+            <br>
+			<div id="map_canvas" style="width:600px; height:400px" ></div>
 		</div> 
 		
-
 	</div> 
-
+    <div class="content-wrap" id="events">
+         
+    </div>
 	<script>
 	$(function() {
 		function log( message ) {
