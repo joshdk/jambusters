@@ -16,7 +16,7 @@
 		<script src="assets/js/mapper.js" type="text/javascript"></script>
 		
 	</head> 
-	<body onload="initialize()"> 
+	<body onload="initialize();"> 
 		<div class="wrapper"> 
 			<div class="header-wrap">
 				<div class="header">

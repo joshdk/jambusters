@@ -32,9 +32,7 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 {
 	var url = "http://ws.audioscrobbler.com/2.0/?method=geo.getevents&lat=" + Lat + "&long=" + Long + "&api_key=b25b959554ed76058ac220b7b2e0a026&format=json&limit=30&callback=?";
    $.getJSON(url, function(data) {
-		console.log(data);
-		var html = '';
-		var items = new Array();
+		var html = '<ul class="eventList" ';
 		if(data.events.total!=0) //no events found
 		{
 			$.each(data.events.event, function(i, item) {
@@ -65,7 +63,7 @@ function getEventsByLatLong(Lat, Long,selector,artistName)
 		{
 			html += "<p> No Events Found </p>";
 		}
-		
+		html+= "</ul>";
 		selector.append(html);
     });
 }
