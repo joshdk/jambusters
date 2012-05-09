@@ -4,7 +4,6 @@ include($_SERVER['DOCUMENT_ROOT'] . '/api/core/auth.php');
 
 $auth=new auth();
 ?>
-
 	<div class="content-wrap"> 
 	<div id="login"> 
 <?php
