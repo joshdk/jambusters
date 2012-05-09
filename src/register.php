@@ -88,7 +88,7 @@ include("header.php");
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
-					<a class="brand" href="#">Jambusters</a>
+					<a class="brand" href="/">Jambusters</a>
 
 					<div class="btn-group pull-right">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">

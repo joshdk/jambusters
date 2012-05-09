@@ -73,6 +73,7 @@ session_start();
 				$_SESSION['authenticated']=true;
 				$_SESSION['user_id']=$row['user_id'];
 				$_SESSION['name']=$row['name'];
+				$_SESSION['admin']=$row['admin'];
 				return true;
 			}
 			return false;
@@ -91,6 +92,46 @@ session_start();
 		public function is_login(){
 			if(isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == true){
 				return true;
+			}
+			return false;
+		}
+
+
+		function is_admin(){
+			return (isset($_SESSION['admin']) && $_SESSION['admin'] == true);
+		}
+
+
+		public function promote($user, $admin){
+			if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
+
+				$res=$this->db->prepare(
+					'UPDATE  `users` '.
+					'SET  `admin` =  ? '.
+					'WHERE  `name` = ?; '
+				);
+				if($res->execute(array($admin, $user))){
+					return true;
+				}
+				return false;
+
+			}
+			return false;
+		}
+
+
+		public function delete($user){
+			if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
+
+				$res=$this->db->prepare(
+					'DELETE FROM `users` '.
+					'WHERE `name` = ?;'
+				);
+				if($res->execute(array($user))){
+					return true;
+				}
+				return false;
+
 			}
 			return false;
 		}
