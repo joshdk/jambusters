@@ -4,29 +4,88 @@ include($_SERVER['DOCUMENT_ROOT'] . '/api/core/auth.php');
 
 $auth=new auth();
 ?>
-	<div class="content-wrap"> 
-	<div id="login"> 
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Le styles -->
+		<link href="../assets/css/bootstrap.css" rel="stylesheet">
+
+		<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+	</head>
+
+	<body>
+
+		
+					<a class="brand" href="/">Jambusters</a>
+
+					<div class="btn-group pull-right">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+							<i class="icon-user"></i> 
 <?php
 	if($auth->is_login()){
-		echo '<strong><em>Welcome '.htmlentities($auth->name()).'</em></strong>';
+		echo htmlentities($auth->name());
+	}else{
+		echo 'anonymous';
+	}
 ?>
-		<br />
-		<a href="/logout.php"><button>Logout</button></a>
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+<?php
+	if($auth->is_login()){
+?>
+							<li>
+							<a href="/logout.php">Logout</a>
+							</li>
 <?php
 	}else{
 ?>
-		<a href="/login.php"><button>Login</button></a> If you have an account
-		<br />
-		<a href="/register.php"><button>Register</button></a> If you do not have an account
-		<br />
+							<li>
+							<a href="/login.php">Login</a>
+							</li>
+							<li>
+							<a href="/register.php">Register</a>
+							</li>
+<?php
+	}
+?>
+						</ul>
+					</div>
+	<div class="content-wrap"> 
+	
+<?php
+	if($auth->is_login()){
+		echo '<strong><em>Welcome '.htmlentities($auth->name()).'</em></strong><br/><br/> ';
+	
+?>
+		
+<?php
+	}else{echo '<h3>Log in or create an account with JamBusters for more features! </h3><br/><br/> '; 
+?>
+		
 <?php
 	}
 ?>
 
 
-		<br /> </div> 
-		
-		
+ 
 		<div class="left-content" > 
 			Select an Artist to add to the list <br /> 
 			<!--Enter artist input box-->
@@ -112,5 +171,23 @@ $auth=new auth();
 	});
 	
 	</script>
+	
+	
+	<!-- Le javascript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/bootstrap-transition.js"></script>
+	<script src="../assets/js/bootstrap-alert.js"></script>
+	<script src="../assets/js/bootstrap-modal.js"></script>
+	<script src="../assets/js/bootstrap-dropdown.js"></script>
+	<script src="../assets/js/bootstrap-scrollspy.js"></script>
+	<script src="../assets/js/bootstrap-tab.js"></script>
+	<script src="../assets/js/bootstrap-tooltip.js"></script>
+	<script src="../assets/js/bootstrap-popover.js"></script>
+	<script src="../assets/js/bootstrap-button.js"></script>
+	<script src="../assets/js/bootstrap-collapse.js"></script>
+	<script src="../assets/js/bootstrap-carousel.js"></script>
+	<script src="../assets/js/bootstrap-typeahead.js"></script>
 
 <?php include("footer.php"); ?> 

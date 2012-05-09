@@ -85,8 +85,7 @@ include("header.php");
 
 	<body>
 
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
+		
 				<div class="container">
 					<a class="brand" href="/">Jambusters</a>
 
@@ -125,8 +124,8 @@ include("header.php");
 					</div>
 
 				</div>
-			</div>
-		</div>
+		
+		
 
 		<div class="container">
 
