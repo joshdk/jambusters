@@ -1,6 +1,6 @@
 <?php
 include("header.php"); 
-include($_SERVER['DOCUMENT_ROOT'] . '/api/core/auth.php');
+include($_SERVER['DOCUMENT_ROOT'] . './api/core/auth.php');  //'./api/core/auth.php'
 
 $auth=new auth();
 ?>
@@ -26,6 +26,32 @@ $auth=new auth();
 	}
 ?>
 
+	<link rel="stylesheet" href="./datepicker/css/datepicker.css" type="text/css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="./datepicker/css/layout.css" />
+
+
+	<script type="text/javascript" src="./datepicker/js/jquery.js"></script>
+	<script type="text/javascript" src="./datepicker/js/datepicker.js"></script>
+    <script type="text/javascript" src="./datepicker/js/eye.js"></script>
+    <script type="text/javascript" src="./datepicker/js/utils.js"></script>
+    <script type="text/javascript" src="./datepicker/js/layout.js?ver=1.0.2"></script>
+
+<script>
+	$(function() {
+		$("#calendar3").DatePicker({
+		flat: true,
+	date: ['2012-05-01','2012-05-07'],
+	current: '2012-05-31',
+	calendars: 1,
+	mode: 'range',
+	starts: 1
+
+});
+	});
+</script>
+
+
+<p id="calendar3"></p>      <!-- calendar widget tag -->
 
 		<br /> </div> 
 		
@@ -41,6 +67,7 @@ $auth=new auth();
 			<div id="log" style="height: 200px; width: 200px; overflow: auto;" class="ui-widget-content"></div>
 			
 		</div> 
+
 		<div class="right-content" onload="initialize();"> 
 			<label for="location">Location</label><input type="text" id="location">
 			<button id="submit" onclick = "codeAddress();">Map It!</button>
