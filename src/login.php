@@ -42,19 +42,14 @@ include("header.php");
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Jambusters</title>
+	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
 
 		<!-- Le styles -->
 		<link href="../assets/css/bootstrap.css" rel="stylesheet">
-		<style type="text/css">
-			body {
-				padding-top: 60px;
-				padding-bottom: 40px;
-			}
-		</style>
+
 		<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -72,9 +67,7 @@ include("header.php");
 
 	<body>
 
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
+		
 					<a class="brand" href="/">Jambusters</a>
 
 					<div class="btn-group pull-right">
@@ -111,9 +104,8 @@ include("header.php");
 						</ul>
 					</div>
 
-				</div>
-			</div>
-		</div>
+			
+		
 
 		<div class="container">
 
@@ -163,15 +155,9 @@ include("header.php");
 						</fieldset>
 					</form>
 
-					<!-- </div> -->
-			</div>
-		</div>
 
-		<!-- <footer> -->
-		<!-- <p>&copy; Jambusters 2012</p> -->
-		<!-- </footer> -->
 
-	</div> <!-- /container -->
+	</div></div>  <!-- /container -->
 
 	<!-- Le javascript
 	================================================== -->

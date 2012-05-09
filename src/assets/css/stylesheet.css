@@ -21,18 +21,15 @@ body{
 
 .content-wrap{ 
 	clear: left; 
-	width: 1000px; 
+	width: 900px; 
 	background-color: #fff; 
 	background-repeat: repeat-y; 
-	margin-top: 140px; 
+	margin-top: 50px; 
 	padding: 20px; 
 	margin-left: auto; 
 	margin-right: auto; 
 }
 
-#login{ 
-	padding-left:  30px; 
-}
 
 .left-content{ 
 	margin-left: 30px; 
